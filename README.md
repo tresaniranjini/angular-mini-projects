@@ -38,6 +38,18 @@ Each folder focuses on a specific Angular concept:
 - Angular Material
 - AG-Grid
 
+# Install Angular CLI
+```
+npm install -g @angular/cli
+```
+# Create a new Angular 18 project (standalone)
+```
+ng new my-angular-app --standalone
+```
+# Navigate into the project folder
+```
+cd my-angular-app
+```
 ## ▶️ How to Run
 Navigate to any project folder and run:
 ```bash
