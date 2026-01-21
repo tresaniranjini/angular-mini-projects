@@ -1,0 +1,58 @@
+<mat-tab-group>
+  <mat-tab label="Tab 1">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+        <mat-error *ngIf="form.get('name')?.hasError('required')">Name is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput formControlName="age" type="number" />
+        <mat-error *ngIf="form.get('age')?.hasError('required')">Age is required</mat-error>
+        <mat-error *ngIf="form.get('age')?.hasError('min')">Age must be at least 18</mat-error>
+        <mat-error *ngIf="form.get('age')?.hasError('max')">Age must be at most 100</mat-error>
+      </mat-form-field>
+
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-error *ngIf="form.get('gender')?.hasError('required')">Gender is required</mat-error>
+      </mat-radio-group>
+
+      <mat-checkbox formControlName="subscription">Subscribe to Newsletter</mat-checkbox>
+
+
+      <div class="form-container">
+        <angular2-multiselect
+          [data]="dropdownList"
+          formControlName="selectedItems"
+          [settings]="dropdownSettings"
+          (onSelect)="onItemSelect($event)"
+          (onDeSelect)="onItemDeselect($event)"
+          (onSelectAll)="onSelectAll($event)"
+          (onDeSelectAll)="onDeSelectAll($event)">
+        </angular2-multiselect>
+      </div>
+
+      <div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Submit</button>
+        <button mat-raised-button color="accent" type="button" (click)="populateForm()">Populate</button>
+      </div>
+    </form>
+
+  </mat-tab>
+  <mat-tab label="Tab 2">
+    <ag-grid-angular
+      [gridOptions]="gridOptions"
+      [columnDefs]="columnDefs"
+      [rowData]="rowData"
+      class="ag-theme-alpine"
+      [pagination]="true"
+      [domLayout]="'autoHeight'"
+      style="height: 400px;"
+    >
+    </ag-grid-angular>
+  </mat-tab>
+</mat-tab-group>
