@@ -1,0 +1,13 @@
+<h1>Posts</h1>
+
+<div *ngIf="posts$ | async as posts; else noPosts">
+  <div *ngFor="let post of posts; trackBy: trackById">
+    <h3>{{post.id}}</h3>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+  </div>
+</div>
+
+<ng-template #noPosts>
+  <p>No posts found</p>
+</ng-template>
