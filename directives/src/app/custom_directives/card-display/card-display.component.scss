@@ -1,0 +1,19 @@
+div[appShowCard] {
+  display: block;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+
+div[appShowCard]:hover {
+  background-color: #e0e0e0;
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #1444c9;
+}

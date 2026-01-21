@@ -1,0 +1,7 @@
+<h4>Custom Directives</h4>
+<div *ngFor="let card of cards">
+  <div *ngIf="card.show" appShowCard appCardHover>
+    <h3>{{ card.title }}</h3>
+    <p>{{ card.description }}</p>
+  </div>
+</div>

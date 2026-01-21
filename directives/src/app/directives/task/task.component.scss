@@ -1,0 +1,81 @@
+/* General layout */
+h2 {
+  text-align: center;
+  color: #4a90e2;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #4a90e2;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ABD;
+}
+
+/* Task list styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #f4f4f4;
+  margin: 8px 0;
+  padding: 10px;
+  border-left: 4px solid #4a90e2;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li.completed {
+  background-color: #e0e0e0;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.highlight {
+  background-color: #fffae6;
+  padding: 5px;
+  font-style: italic;
+}
+
+/* Filter dropdown styling */
+select {
+  padding: 8px;
+  border: 1px solid #4a90e2;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #4a90e2;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Styling for dynamic text */
+p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+p[ngStyle] {
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
