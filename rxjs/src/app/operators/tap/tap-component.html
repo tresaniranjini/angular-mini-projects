@@ -1,0 +1,8 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<div *ngIf="!isLoading">
+  <h3>User Data with Tap (Logged in Console):</h3>
+  <ul>
+    <li *ngFor="let user of users">{{ user.name }} - {{ user.email }}</li>
+  </ul>
+</div>

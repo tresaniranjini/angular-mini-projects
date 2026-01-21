@@ -1,0 +1,8 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<div *ngIf="!isLoading">
+  <h3>MergeMap Example (Merging API Results):</h3>
+  <ul>
+    <li>{{ users[0].name }} - {{ users[0].email }}</li>
+  </ul>
+</div>

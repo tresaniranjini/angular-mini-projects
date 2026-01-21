@@ -1,0 +1,8 @@
+<mat-progress-spinner *ngIf="isLoading"></mat-progress-spinner>
+
+<div *ngIf="!isLoading">
+  <h3>SwitchMap Example (Using Post Data after Fetching Users):</h3>
+  <ul>
+    <li>{{ users[0].name }} - {{ users[0].email }}</li>
+  </ul>
+</div>

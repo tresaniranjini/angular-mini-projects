@@ -1,0 +1,8 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<div *ngIf="!isLoading">
+  <h3>User Information:</h3>
+  <ul>
+    <li>{{ user?.name }} - {{ user?.email }}</li>
+  </ul>
+</div>

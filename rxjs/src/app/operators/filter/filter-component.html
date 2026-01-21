@@ -1,0 +1,8 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<div *ngIf="!isLoading">
+  <h3>Filtered User Data (Email contains "example.com"):</h3>
+  <ul>
+    <li *ngFor="let user of users">{{ user.name }} - {{ user.email }}</li>
+  </ul>
+</div>
