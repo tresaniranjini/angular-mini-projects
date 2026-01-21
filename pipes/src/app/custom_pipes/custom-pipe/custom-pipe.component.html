@@ -1,0 +1,14 @@
+<div>
+  <!-- Input to filter the list -->
+  <input [(ngModel)]="searchTerm" placeholder="Search items" />
+
+  <!-- Display the filtered list of items -->
+  <h3>Filtered Items:</h3>
+  <ul>
+    <li *ngFor="let item of items | filterData: searchTerm">{{ item }}</li>
+  </ul>
+
+  <!-- Display the transformed text -->
+  <h3>Transformed Text:</h3>
+  <p>{{ text | textTransform }}</p>
+</div>

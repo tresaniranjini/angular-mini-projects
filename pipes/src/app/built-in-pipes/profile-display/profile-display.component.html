@@ -1,0 +1,12 @@
+
+<div *ngIf="profile$ | async as profile">
+    <h2>User Profile</h2>
+    <p><strong>Name:</strong>
+        {{ profile.name | titlecase }}</p>
+    <p><strong>Age:</strong>
+        {{ profile.age }} years</p>
+    <p><strong>Date:</strong>
+        {{ profile.registrationDate | date:'fullDate' }}</p>
+    <p><strong>Account Balance:</strong>
+        {{ profile.balance | currency:'INR':'symbol':'1.2-2' }}</p>
+</div>
