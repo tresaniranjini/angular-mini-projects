@@ -31,7 +31,7 @@ Each folder focuses on a specific Angular concept:
 - **screenshot** – Output screenshots for reference
 
 ## ⚙️ Tech Stack
-- Angular (Standalone & Module-based)
+- Angular 18 (Standalone & Module-based)
 - TypeScript
 - HTML, CSS, SCSS
 - RxJS
