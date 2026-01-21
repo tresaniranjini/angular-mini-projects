@@ -1,0 +1,121 @@
+<h3>Reactive Form!</h3>
+
+<div class="form-container">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="first-name">First Name</label>
+      <div class="input-icon">
+        <i class="fas fa-user"></i>
+        <input type="text" id="first-name" formControlName="firstName" placeholder="Enter your first name" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="last-name">Last Name</label>
+      <div class="input-icon">
+        <i class="fas fa-user"></i>
+        <input type="text" id="last-name" formControlName="lastName" placeholder="Enter your last name" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-Mail</label>
+      <div class="input-icon">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" formControlName="email" placeholder="Enter your email address" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone #</label>
+      <div class="input-icon">
+        <i class="fas fa-phone"></i>
+        <input type="tel" id="phone" formControlName="phone" placeholder="(845) 555-1212" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address</label>
+      <div class="input-icon">
+        <i class="fas fa-map-marker-alt"></i>
+        <input type="text" id="address" formControlName="address" placeholder="Enter your address" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="city">City</label>
+      <div class="input-icon">
+        <i class="fas fa-city"></i>
+        <input type="text" id="city" formControlName="city" placeholder="Enter your city" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="state">State</label>
+      <div class="input-icon">
+        <i class="fas fa-globe"></i>
+        <select id="state" formControlName="state" required>
+          <option value="" disabled selected>Please select your state</option>
+          <option>Tamil Nadu</option>
+          <option>Kerala</option>
+          <option>Delhi</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="zip-code">Zip Code</label>
+      <div class="input-icon">
+        <i class="fas fa-envelope-open-text"></i>
+        <input type="text" id="zip-code" formControlName="zipCode" placeholder="Enter your zip code" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="website">Website or Domain Name</label>
+      <div class="input-icon">
+        <i class="fas fa-globe"></i>
+        <input type="text" id="website" formControlName="website" placeholder="Enter your website or domain name" required>
+      </div>
+    </div>
+
+    <div class="form-radio">
+      <label>Do you have hosting?</label>
+      <div class="input-radio">
+        <input type="radio" id="hosting-yes" formControlName="hosting" value="yes" required>
+        <label for="hosting-yes">Yes</label>
+        <input type="radio" id="hosting-no" formControlName="hosting" value="no" required>
+        <label for="hosting-no">No</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Project Description</label>
+      <div class="input-icon">
+        <i class="fas fa-edit"></i>
+        <textarea id="description" formControlName="description" placeholder="Describe your project" required></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Send <i class="fas fa-paper-plane"></i></button>
+  </form>
+</div>
+
+<div *ngIf="users.length > 0" class="stored-users">
+  <h3>Stored Users:</h3>
+  <div class="user-cards">
+    <div class="user-card" *ngFor="let user of users; let i = index">
+      <h4>{{ user.firstName }} {{ user.lastName }}</h4>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Phone:</strong> {{ user.phone }}</p>
+      <p><strong>Address:</strong> {{ user.address }}</p>
+      <p><strong>City:</strong> {{ user.city }}</p>
+      <p><strong>State:</strong> {{ user.state }}</p>
+      <p><strong>Zip Code:</strong> {{ user.zipCode }}</p>
+      <p><strong>Website:</strong> {{ user.website }}</p>
+      <p><strong>Hosting:</strong> {{ user.hosting }}</p>
+      <p><strong>Description:</strong> {{ user.description }}</p>
+      <button (click)="editUser(i)">Edit</button>
+    </div>
+  </div>
+</div>
