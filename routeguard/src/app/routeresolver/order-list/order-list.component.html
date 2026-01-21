@@ -1,0 +1,6 @@
+<h2>Order List</h2>
+    <ul>
+      <li *ngFor="let order of orders" [routerLink]="['/orders', order.id]">
+        Order #{{ order.id }} - {{ order.product }}
+      </li>
+    </ul>

@@ -1,0 +1,79 @@
+<!--
+<h3>Angular 18 Route Guards </h3>
+    <nav>
+      <a routerLink="/">Home</a><br>
+      <a routerLink="/login">Login</a><br>
+      <a routerLink="/protected">Protected</a>
+    </nav>
+
+
+<h3> Angular 18 Route Params</h3>
+    <nav>
+      <a routerLink="/users">User List</a>
+    </nav>
+
+
+<h3> Angular 18 Route Resolver</h3>
+  <nav>
+    <a routerLink="/orders" routerLinkActive="active">Order List</a>
+  </nav>
+
+
+<h3>Angular 18 Deeply Nested Route </h3>
+  <nav>
+    <a routerLink="/catalog" routerLinkActive="active">Go to Catalog</a>
+  </nav>
+
+<h3>Angular Preloading Strategies</h3>
+  <nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a> <br>
+    <a routerLink="/admin" routerLinkActive="active">Admin</a>
+  </nav>
+
+  <h3>Angular 18 Lazy Loading</h3>
+  <nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a> <br>
+    <a routerLink="/settings" routerLinkActive="active">Settings</a>
+  </nav>
+-->
+<!--
+<h3>Angular Business Logic Service</h3>
+  <app-product-list></app-product-list>
+-->
+
+
+<h3>Interceptor</h3>
+<div class="container">
+
+  <div *ngIf="data">
+    <h4>Fetched Data:</h4>
+    <pre>{{ data |slice:0:2 | json }}</pre>
+  </div>
+
+  <div *ngIf="loading">
+    <p>Loading data...</p>
+  </div>
+
+  <div *ngIf="error">
+    <p>Error loading data: {{ error }}</p>
+  </div>
+</div>
+
+
+
+<!--
+<app-parent></app-parent>
+    <app-reusable [content]="'Custom Content for Reusable Component'"></app-reusable>
+    <app-smart></app-smart>
+    <app-content-projection>
+      <p>This content is projected into ContentProjectionComponent!</p>
+    </app-content-projection>
+    <app-template-outlet></app-template-outlet>
+      <app-lifecycle-hooks></app-lifecycle-hooks>
+      <app-re-use></app-re-use>
+
+  -->
+
+<!-- <app-p></app-p> -->
+
+<router-outlet></router-outlet>

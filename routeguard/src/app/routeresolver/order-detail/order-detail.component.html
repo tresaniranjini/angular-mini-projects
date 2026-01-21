@@ -1,0 +1,6 @@
+<h2>Order Detail</h2>
+    <div *ngIf="order">
+      <p>Product: {{ order.product }}</p>
+      <p>Quantity: {{ order.quantity }}</p>
+      <p>Total: ${{ order.total }}</p>
+    </div>

@@ -1,0 +1,12 @@
+<app-button
+  label="Submit"
+  color="primary"
+  [disabled]="isSubmitting"
+  (onClick)="handleSubmit()"
+></app-button>
+
+<app-button
+  label="Cancel"
+  color="secondary"
+  (onClick)="handleCancel()"
+></app-button>
